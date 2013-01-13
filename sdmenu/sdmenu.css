@@ -1,0 +1,57 @@
+div.sdmenu {
+	width: 250px;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+div.sdmenu div {
+	background: url(title.png) repeat-x;
+	overflow: hidden;
+}
+div.sdmenu div:first-child {
+	border-radius:8px 0px 0px 0px;
+}
+div.sdmenu div.collapsed {
+	height: 25px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 5px 5px 5px 25px;
+	font-weight: bold;
+	color: white;
+	background: url(expanded.png) no-repeat 10px center;
+	cursor: default;
+	/*border-bottom: 1px solid #ddd;*/
+}
+div.sdmenu div.collapsed span {
+	background-image: url(collapsed.png);
+}
+
+div.sdmenu div span:hover{
+	cursor:pointer;
+	background-image: url(expanded_yellow.png);
+	color:#ffff99;
+}
+
+div.sdmenu div.collapsed span:hover{
+	cursor:pointer;
+	background-image: url(collapsed_yellow.png);
+}
+
+div.sdmenu div a {
+	padding: 5px 10px;
+	background: #339999;
+	display: none;
+	border-bottom: 1px solid #ddd;
+	color: #000;
+	text-decoration:none;
+	font-weight:bold;
+}
+div.sdmenu div a.current {
+	background:#ffffcc;
+}
+div.sdmenu div a:hover {
+	background : #ffffcc url(linkarrow.png) no-repeat right center;
+	text-decoration: none;
+}

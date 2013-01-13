@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html itemscope itemtype="http://schema.org/Education">
+<head>
+
+	<!--Google Plus Meta Tags-->
+	<meta itemprop="name" content="AP Statistics">
+	<meta itemprop="description" content="Learn AP Statistics!">
+	<meta itemprop="image" content="../img/intro_to_stat.jpg">
+	
+	<title>Statistics | The Basics</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+	<link rel="stylesheet" type="text/css" href="../sdmenu/sdmenu.css" />
+	<script type="text/javascript" src="../sdmenu/sdmenu.js">var myMenu;</script>
+	<script type="text/javascript" src="../api/bookmark_site.js"></script>
+	<script type="text/javascript" src="../api/jquery-1.7.2.min.js"></script>
+	<script language="javascript">
+		
+		window.onload = function(){
+			currentTab();
+			document.getElementById("header").style.top = "-50px";
+			displayHeader();
+			myMenu = new SDMenu("nav_menu");
+			myMenu.init();
+		}
+		
+		$(document).ready(function() {
+			$("#hide_button").click(function(){
+				hideHeader();
+			}); 
+			$("#hidden_header").click(function() { 
+				displayHeader();
+			});
+		});
+		
+		function displayHeader(){
+			$("#header").animate({ 
+				top: "0px" 
+			}, 1000); 
+			$("#hidden_header").animate({ 
+				top: "-25px" 
+			}, 1000); 
+		}
+		
+		function hideHeader(){
+		    $("#header").animate({ 
+				top: "-50px" 
+			}, 1000); 
+			$("#hidden_header").animate({ 
+				top: "0px"
+			}, 1000); 
+		}
+		
+		function currentTab(){
+			var tabs_links = document.getElementById("tabs").getElementsByTagName("a");
+			if(document.location.href.toString().charAt(document.location.href.toString().length - 1) == '/'){
+				tabs_links[0].style.color = '#ffffcc';
+			}
+			for (var i = 0; i < tabs_links.length; i++){
+				if (tabs_links[i].href == document.location.href) {
+				tabs_links[i].style.color = "#ffffcc";
+				break;
+				}
+			}
+		}
+
+	</script>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="selectivizr.js"></script>
+		<noscript><link rel="stylesheet" href="../style.css" /></noscript>
+	<![endif]--> 
+</head>
+<body>
+	<div id="fb-root"></div>
+
+	<!--A fixed header bar at the top of the page-->
+	<div id="header">
+
+		<!--FACEBOOK LIKE BUTTON-->
+		<div class="fb-like" id="fb"
+			data-href="#"
+			data-send="false"
+			data-layout="button_count"
+			data-width="120"
+			data-show-faces="true"
+			data-font="arial">
+		</div>
+		<script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+
+		<!--GOOGLE PLUS BUTTON-->
+		<div id="googleplus">
+			<g:plusone></g:plusone>
+		</div>
+		<script type="text/javascript">(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();</script>
+		
+		<!--TWITTER TWEET BUTTON-->
+		<div id="twitter">
+			<a href="https://twitter.com/share"
+				class="twitter-share-button"
+				data-url="#"
+				data-via="SBertics"
+				data-lang="en">
+				Tweet
+			</a>
+		</div>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		
+		<!--the middle section of the bar that holds the title images for the page-->
+		<div id="menu_bar">
+			<a href="#"><img height="30" src="../img/menubar/header_title.png"/></a>
+			<img height="30" src="../img/menubar/header_divider.png"/>
+			<a href="#"><img height="30" src="../img/menubar/header_basics.png"/></a>
+		</div><!--END MENU BAR-->
+		
+		<!--THE SEARCH BAR-->
+		<form method="get" action="#" id="search">
+			<input name="q" type="text" size="40" placeholder="Search Statistics . . ." />
+		</form><!--END SEARCH BAR-->
+
+		<!--HIDE HEADER BUTTON-->
+		<img src="../img/menubar/arrow_up.png"
+			id="hide_button"
+			class="faded_img"
+			alt="Hide Header">
+		</img>
+		<!--END HIDE HEADER BUTTON-->
+		
+	</div><!--END HEADER-->
+	
+	<!--The Button to Reveal the Header Bar-->
+	<img src="../img/menubar/arrow_down.png"
+		id="hidden_header" 
+		class="faded_img"
+		alt="Display Header">
+	</img><!--END HIDDEN HEADER-->
+	
+	<!--The page's content goes here-->
+	<div id="wrapper">
+	
+		<div id="sidebar">
+			<div id="nav_menu" class="sdmenu">
+					<div>
+						<span>The Basics</span>
+						<a href="intro.html">Introduction</a>
+						<a href="#">Variables</a>
+						<a href="#">Graphing</a>
+						<a href="#">Distributions</a>
+						<a href="#">Standard Deviation</a>
+						<a href="#">Transformations</a>
+					</div>
+					<div>
+						<span>Normal Distribution</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Two Variable Data</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Producing Data</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Probability</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Binomial and Geometric Distributions</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Sampling Distributions</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Inference: Basics</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Inference: Distributions, Proportions</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Inference: Chi Squared, Regression</span>
+						<a href="javascript:switchTabs('intro');">Introduction</a>
+						<a href="javascript:switchTabs('intro');">Variables</a>
+						<a href="javascript:switchTabs('intro');">Graphing</a>
+						<a href="javascript:switchTabs('intro');">Distributions</a>
+						<a href="javascript:switchTabs('intro');">Standard Deviation</a>
+						<a href="javascript:switchTabs('intro');">Transformations</a>
+					</div>
+					<div>
+						<span>Extras</span>
+						<a>This is something</a>
+					</div>
+				</div><!--END SDMENU-->
+				
+				<!--The Downloads Box-->
+				<div class="downloads_box">
+					<span>Download This Section!</span>
+					<img height="32" src="../img/downloads/finger.png"/>
+					<a href="#"><img height="32" src="../img/downloads/docx.png"/></a>
+					<a href="#"><img height="32" src="../img/downloads/doc.png"/></a>
+					<a href="#"><img height="32" src="../img/downloads/pdf.png"/></a>
+					<a href="#"><img height="32" src="../img/downloads/txt.png"/></a>
+				</div><!--END DOWNLOADS BOX-->
+		</div><!--END SIDEBAR-->
+		
+		<div id="content">
+			
+			<div id="tabs">
+				<li><a href="intro">&nbsp;Intro&nbsp;</a></li>
+				<li><a href="#">&nbsp;Variables&nbsp;</a></li>
+				<li><a href="#">&nbsp;Graphing&nbsp;</a></li>
+				<li><a href="#">&nbsp;Distributions&nbsp;</a></li>
+				<li><a href="#">&nbsp;Std. Deviation&nbsp;</a></li>
+				<li><a href="#">&nbsp;Transformations&nbsp;</a></li>
+			</div><!--END TABS-->
+			
+			<noscript>
+				<h3 align="center">Enabling Javascript is recommended to best view this page.</h3>
+			</noscript>
+			
+			<p class="section_header">Introduction</p>
+			
+			<p class="section_subheader">What is statistics?</p>
+			<p>Simply put, statistics is the science of data.  It is a tool used to understand information and then draw conclusions and make predictions based on that data.</p>
+			<p>The first seven sections of this web series are going to be based on understanding data – from variables, to distributions, to probability – and the final three sections are going to deal with conclusions that can be drawn from data – a process called statistical inference.</p>
+			<p class="section_subheader">Material</p>
+			<p>This series of webpages starts at the very beginning of any course in statistics and builds up from there.  We’ll start by covering all the basics from variables and averages and continue working up in difficulty through inference of tables and regression.  The only prior knowledge required to successfully navigate these tutorials is an understanding of high school algebra, although the first few pages will be even simpler than that.  By the end of the series, we will have completed the equivalent of a high school <a href="http://www.collegeboard.com/student/testing/ap/sub_stats.html"> Advanced Placement Statistics</a> course or the first semester of statistics in college.  While I’ll try to explain the concepts as simply as possible, I’ll also throw in the higher math, including the calculus and formulas behind the calculator, for those who are interested.</p>
+			<p class="section_subheader">Calculator</p>
+			<img width="300px" src="./intro_files/both_calculators.png"></img>
+			<p>Since I’m modeling this course after an Advanced Placement course in high school or an introductory semester in college, I’ll also include images on how to use a graphing calculator for various statistics operations.  Specifically, I’ll reference two such graphing calculators with whom I have experience – the TI-83 and TI-84 series of graphing calculators, and the TI-Nspire series of graphing calculators.</p>
+			<p>For maximum compatibility with the tutorials I present on the website, I recommend the TI-84 Plus or the TI-Nspire CX.  The TI-83, will work with most of the simple statistical functions, but it is not as well equipped as the TI-84 Plus to handle some of the equations that we will be using at the end of this web series.</p>
+			<p class="section_subheader">Contact</p>
+			<p>If you any questions about this website or statistics in general, feel free to email me at <a href="mailto:nobody@nowhere.com?Subject=Stat%20Stuff?!">nobody@nowhere.com</a>.  It’s my personal goal to respond to all emails within 24 hours and please, no spam.</p>
+			<p>Thanks for visiting my website, and I encourage you to share, <a href="#">like</a>, <a href="javascript:bookmarksite('AP Statistics', '#')">bookmark</a>, favorite, and spread my content in any way possible!</p>
+			<a href="#"><img width="60px" class="arrow_right" alt="Next Page" src="../img/arrow_right.png"></img></a>
+		</div><!--END CONTENT-->
+		
+	</div><!--END WRAPPER-->
+	
+	<div id="copyright">
+		<span>Web Design and Content by <a href="http://sbertics.com">Scott Bertics</a> &copy; 2012</span>
+	</div>
+
+</body>
+</html>
