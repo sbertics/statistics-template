@@ -12,4 +12,4 @@ However, in the end I just left the first page in the tutorial
 as a generic website template.
 
 The primary HTML file can be found inside the basics folder and is called:
-  intro.html
+- intro.html
