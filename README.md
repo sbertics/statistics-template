@@ -11,5 +11,9 @@ from the ground up and then host statistics tutorials on it.
 However, in the end I just left the first page in the tutorial
 as a generic website template.
 
-The primary HTML file can be found inside the basics folder and is called:
+The primary HTML file can be found inside the basics folder and
+is called:
 - intro.html
+
+This project taught me a significant amount about web design and
+I will likely use this template in the future.
